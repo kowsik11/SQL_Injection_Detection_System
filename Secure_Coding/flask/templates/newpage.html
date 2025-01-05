@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>SQL Injection Detection Results</title>
+</head>
+<body>
+    <div class="container">
+        <h1>SQL Injection Detection Results</h1>
+        <form method="POST" action="/newpage"> 
+            <label for="user_input">Enter an SQL Query:</label>
+            <input type="text" id="user_input" name="user_input" required>
+            <!-- <button type="submit">Detect</button> -->
+            <button type="submit" onclick="location.href='/result'">results</button>
+        </form>
+    </div>
+</body>
+</html>

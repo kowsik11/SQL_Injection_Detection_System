@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>SQL Injection Detection Results</title>
+</head>
+<body>
+    <div class="container">
+        <h1>SQL Injection Detection Results</h1>
+        <div class="results">
+            <h2>Results:</h2><br/>
+            
+            <p><strong>Logistic Regression:</strong> {{ logistic_result }}</p>
+            <p><strong>Random Forest:</strong> {{ random_forest_result }}</p>
+            <p><strong>Decision Tree:</strong> {{ decision_tree_result }}</p>
+        </div>
+        <a href="/">Back to Input</a>
+    </div>
+</body>
+</html>
